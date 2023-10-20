@@ -1,8 +1,32 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1.5em;
   padding: 6rem;
   min-height: 100vh;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.button {
+  padding: 6px 12px;
+  font-size: 1em;
+  font-weight: 500;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.err {
+  color: #BF0E0E;
 }
