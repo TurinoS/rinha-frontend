@@ -29,7 +29,8 @@
   transition: scale 300ms ease-in-out;
 }
 
-.button:hover, .button:focus {
+.button:hover,
+.button:focus {
   scale: 1.05;
 }
 
@@ -38,5 +39,5 @@
 }
 
 .err {
-  color: #BF0E0E;
+  color: #bf0e0e;
 }
