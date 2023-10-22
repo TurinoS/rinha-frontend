@@ -5,8 +5,8 @@ import { Dispatch, ReactNode, SetStateAction, createContext, useEffect, useState
 type TreeViewerContextType = {
     jsonFile: File | undefined,
     setJsonFile: Dispatch<SetStateAction<File | undefined>>,
-    jsonText: object | undefined,
-    setJsonText: Dispatch<SetStateAction<object | undefined>>
+    jsonText: Array<any> | undefined,
+    setJsonText: Dispatch<SetStateAction<Array<any> | undefined>>
 }
 
 export const TreeViewerContext = createContext<TreeViewerContextType>({
@@ -18,7 +18,7 @@ export const TreeViewerContext = createContext<TreeViewerContextType>({
 
 export default function TreeViewerContextProvider({ children }: { children: ReactNode }) {
     const [jsonFile, setJsonFile] = useState<File | undefined>(undefined);
-    const [jsonText, setJsonText] = useState<object | undefined>(undefined);
+    const [jsonText, setJsonText] = useState<Array<any> | undefined>(undefined);
 
     return(
         <TreeViewerContext.Provider value={{ jsonFile, setJsonFile, jsonText, setJsonText }}>

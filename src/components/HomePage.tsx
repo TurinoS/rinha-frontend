@@ -14,7 +14,12 @@ export default function HomePage() {
       if (event.target) {
         const text = event.target.result?.toString() as string;
         try {
-          const jsonData = JSON.parse(text);
+          let jsonData = JSON.parse(text);
+          
+          if (typeof jsonData === "object" && !Array.isArray(jsonData)) {
+            jsonData = Object.values(jsonData);
+          }
+  
           setJsonText(jsonData);
         } catch (error) {
           console.error("Erro ao analisar o JSON:", error);

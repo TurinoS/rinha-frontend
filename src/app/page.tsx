@@ -15,7 +15,15 @@ export default function Home() {
       ) : (
         <div className={styles.main}>
           <h2>{jsonFile?.name}</h2>
-          <pre>{JSON.stringify(jsonText, null, 2)}</pre>
+
+          {Object.keys(jsonText[0]).map((item, index) => (
+            <div key={index}>
+              <p>{item}: </p>
+              <pre>{JSON.stringify(jsonText[0][item], null, 2)}</pre>
+            </div>
+          ))}
+
+          
         </div>
       )}
     </main>
