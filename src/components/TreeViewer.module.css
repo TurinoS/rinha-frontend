@@ -1,3 +1,10 @@
 .treeDiv {
-  margin: .5em 0 0 2em;
+  padding: .5em 0 0 2em;
+  border-left: 1px solid orange;
+}
+
+.treeDiv2 {
+  padding: .5em 0 0 2em;
+  border-left: 1px solid orange;
+  background-color: red;
 }
